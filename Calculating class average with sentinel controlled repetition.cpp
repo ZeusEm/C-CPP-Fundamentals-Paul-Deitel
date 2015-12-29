@@ -11,8 +11,8 @@ int main()
     string a;
     getline(cin, a);
     cout<<endl<<"Please enter marks of the students in the class (enter -1 to exit): "<<endl<<endl;
-    int i=0, marks=0, total=0;
-    float average=0.0;
+    int i=0, marks=0;
+    float total=0.0, average=0.0;
     while(1)
     {
         cout<<"Enter marks for student #"<<(i+1)<<": ";
