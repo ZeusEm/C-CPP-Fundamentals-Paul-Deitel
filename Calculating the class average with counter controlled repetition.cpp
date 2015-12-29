@@ -13,8 +13,8 @@ int main()
     cout<<endl<<"Enter the number of students in the class (enter 0 to exit): ";
     int b=0;
     cin>>b;
-    int i=0, marks=0, total=0;
-    float average=0.0;
+    int i=0, marks=0;
+    float total=0.0, average=0.0;
     if(b==0)
         return 0;
     else
