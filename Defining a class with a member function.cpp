@@ -1,21 +1,22 @@
 #include <iostream>
-#include <stdlib.h>
+#include <conio.h>
 
 using namespace std;
 
 class a
 {
-    public:
-    int show()
-    {
-        cout<<"Hello World!";
-    }
+public:
+	void show()
+	{
+		cout << "Hello World!";
+	}
 };
 
 int main()
 {
-    system("cls");
-    a b;
-    b.show();
-    return 0;
+	system("cls");
+	a b;
+	b.show();
+	getch();
+	return 0;
 }
