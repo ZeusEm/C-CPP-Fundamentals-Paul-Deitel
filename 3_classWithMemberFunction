@@ -1,0 +1,29 @@
+//Refer Lesson2_fig03_01
+
+//Lecture Notes
+/*
+	public: is an access modifier for C++ classes. Everything that is defined with a public access modifier is visible to both the deriving classes as well as any another scope block where the class object is visible.
+*/
+
+#include "stdafx.h"
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+class GradeBook
+{
+public:
+	void displayMessage()
+	{
+		cout << "Welcome to the Grade Book class!";
+	}
+};
+
+int main()
+{
+	GradeBook grade;
+	grade.displayMessage();
+	_getch();
+    return 0;
+}
