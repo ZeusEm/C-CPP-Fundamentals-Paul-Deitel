@@ -1,0 +1,69 @@
+//Refer Lesson1_fig02_01
+
+//1. Comments in C++
+//There are two types of comments in C++. First are comments like this. These are called single-line comments.
+/*
+	This is the second type. These are called multi-line comments. Make sure you include them everywhere for documenting code. Perhaps use fancy patterns like the one below so that they are easily recognizable.
+*/
+
+/*
+*
+*			Here's a fancy comment pattern for you to implement in your code.
+*
+*/
+
+//2. Header files in C++
+/*
+	Ever opened a header file? Header files contain classes that provide different functionalities to you, the programmer. For example the iostream we include below as a header file provides the functionality to your program to print the output on the screen (to the standard output stream). And conio contains the definition for getch() which we use to hold our output so that we can see it. Basically it waits for a character to be entered and holds the output screen until that. If it wasnt included the screen would have just displayed a hello world and disappeared.
+*/
+
+//3. How does a C++ program execute?
+/*
+	a) You write some code. That file is the source file.
+	b) The source is converted into it's respective object file. An object file is a binary file.
+	c) The object files are then linked together and executed.
+	
+	The header files we were discussing about, when they are included into a C++ program, they are compiled where they exist and the compiled code is then included into the file that called for them. This is good because we have a basic set of files that contain the capabilities and we don't have to explicitly define those capabilities for each program we write. We instead just include them in every program that we code where we need them.
+*/
+
+//3. Preprocessor Directives
+/*
+	#include here is a preprocessor directive. It just basically tells the compiler to include a header file.
+*/
+
+//Include the precompiled header file
+#include "stdafx.h"
+
+//Include the required header files
+#include<iostream>
+#include<conio.h>
+
+//For namespace conflict prevention, std stands for standard. So namespace::std stands for standard namespace
+using namespace::std;
+
+//4. Main method
+/*
+	In all C++ applications, the execution starts from the main function. It has a return type which determines the value that the function returns to the command line after execution. Int and other return types are used in some cases as the functions do return certain values based on their purpose of operation or simply to check from the calling function if the called function exited gracefully. Generally 0 is returned if the function exited successfully. It may have arguments too. The standard C++ main function looks like this
+		
+		int main(int argc, char* argv[]){
+			return 0;
+		}
+
+	For more on argc and argv, refer this excerpt
+		argv and argc are how command line arguments are passed to main() in C and C++.
+
+		argc will be the number of strings pointed to by argv. This will (in practice) be 1 plus the number of arguments, as virtually all implementations will prepend the name of the program to the array.
+
+		The variables are named argc (argument count) and argv (argument vector) by convention, but they can be given any valid identifier: int main(int num_args, char** arg_strings) is equally valid.
+
+		They can also be omitted entirely, yielding int main(), if you do not intend to process command line arguments.
+
+		Basically, argc is the number of arguments being passed into your program from the command line and argv is the array of arguments.
+*/
+int main()
+{
+	//Print a line to the standard output stream object (cout). \n is an escape character that places the output cursor after printing the string to the beginning of the next line. << is also called the stream insertion operator which inserts the string we want to print into the standard output stream object (cout)
+	cout << "Hello World!";
+	_getch();
+	return 0;
+}
