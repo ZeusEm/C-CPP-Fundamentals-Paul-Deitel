@@ -1,0 +1,66 @@
+//Refer Lesson1_fig02_09
+
+/*
+*	Relational Operators in C++
+	1) == (Equality Operator)
+	2) !=
+	3) <
+	4) >
+	5) <=
+	6) >=
+*/
+
+//Lecture Notes
+/*
+	std stands for standard C++ namespace library
+	cout stands for standard output stream object
+	cin stands for standard input stream object
+	endl is a stream manipulator. It's better than \n because not only it pushes the cursor to the beginning of the next line, it also flushes the output buffer
+
+	when we use
+		namespace std
+	we include the statements within the namespace of all the various header files available to us while when we use 
+		using std::cout;
+	we only include the cout statement from the standard C++ namespace
+	One advantage of specifying namespace for every statement we include is that by using namespace std we increase the risk of naming collision. For example cout as a statement could possibly do and mean different things in different header files, which if included together will cause naming collision. Hence we typically want to include as few name in our programs as possible.
+
+	Suppose there is some code like
+		cin>>num1>>num2;
+	where the statement uses both num1 and num2 as uninitialised variables.
+	Suppose during the output, the user entered 5 as num1 and hello for num2
+	what would happen is that the program would run perfectly fine. however since num2 is an integer and the input for the same is a string, the cin would fail for num2 and whatever garbage value is stored within num2 would continue being used during the rest of the program.
+	Further if both num1 and num2 were given string values, or even num1 was given hello and num2 5, both cases would result in the same scenario where both integers would carry on garbage values stored inside of them for the rest of the program because it's so that if the first cin fails the next on in continuation doesn't even take place.
+*/
+
+#include "stdafx.h"
+#include<iostream>
+#include<conio.h>
+
+using namespace std;
+
+int main()
+{
+	cout << "Enter two numbers:" << endl;
+	cout << "Number 1: ";
+	int a;
+	cin >> a;
+	cout << "Number 2: ";
+	int b;
+	cin >> b;
+	cout << endl << endl << "Comapring the entered numbers using relational and eqality operators inside if clauses:" << endl<<endl;
+	if (a == b)
+		cout << "Number 1 is equal to Number 2"<<endl;
+	if (a != b)
+		cout << "Number 1 is not equal to Number 2" << endl;
+	if (a < b)
+		cout << "Number 1 is smaller than Number 2" << endl;
+	if (a > b)
+		cout << "Number 1 is greater than Number 2" << endl;
+	if (a <= b)
+		cout << "Number 1 is smaller than or equal to Number 2" << endl;
+	if (a >= b)
+		cout << "Number 1 is greater than or equal to Number 2" << endl;
+	_getch();
+    return 0;
+}
+
